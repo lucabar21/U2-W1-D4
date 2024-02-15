@@ -1,0 +1,117 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Indie Flower";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+/* BACKGROUND LAVAGNA */
+main {
+  width: 100%;
+  background-color: #666666;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  padding: 3rem;
+}
+
+/* POST-IT  */
+main div {
+  text-align: center;
+  width: 250px;
+  height: 210px;
+  padding: 1rem;
+  box-shadow: 0px 10px 4px -3px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+main div:hover {
+  transform: scale(1.2);
+  transition: all 0.5s;
+  box-shadow: 0px 20px 8px -3px rgba(0, 0, 0, 0.5);
+}
+main div h2 {
+  margin-top: 3rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+main div p {
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+.postIt-1,
+.postIt-5,
+.postIt-7 {
+  background: rgb(253, 253, 203);
+  background: linear-gradient(
+    180deg,
+    rgba(253, 253, 203, 1) 0%,
+    rgba(253, 253, 203, 1) 77%,
+    rgba(189, 189, 163, 1) 100%
+  );
+  transform: rotate(355deg);
+}
+.postIt-2,
+.postIt-4,
+.postIt-8 {
+  transform: rotate(5deg);
+  background: rgb(203, 253, 205);
+  background: linear-gradient(
+    180deg,
+    rgba(203, 253, 205, 1) 0%,
+    rgba(203, 253, 205, 1) 77%,
+    rgba(159, 181, 161, 1) 100%
+  );
+}
+.postIt-3,
+.postIt-6 {
+  transform: rotate(352deg);
+  background: rgb(139, 140, 155);
+  background: linear-gradient(0deg, rgba(139, 140, 155, 1) 0%, rgba(202, 202, 250, 1) 77%, rgba(202, 202, 250, 1) 100%);
+}
+
+/* EXTRA */
+@keyframes show-up {
+  from {
+    opacity: 0;
+    translate: 0 -5px;
+    transform: scale(2);
+  }
+  to {
+    opacity: 1;
+    translate: 0;
+  }
+}
+
+main div {
+  animation: show-up 0.3s both;
+}
+.postIt-1 {
+  animation-delay: 0.5s;
+}
+.postIt-2 {
+  animation-delay: 1s;
+}
+.postIt-3 {
+  animation-delay: 1.5s;
+}
+.postIt-4 {
+  animation-delay: 2s;
+}
+.postIt-5 {
+  animation-delay: 2.5s;
+}
+.postIt-6 {
+  animation-delay: 3s;
+}
+.postIt-7 {
+  animation-delay: 3.5s;
+}
+.postIt-8 {
+  animation-delay: 4s;
+}
